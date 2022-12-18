@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Add a stock</h1>
+    <form method="post">
+        <label for="stockSymbol">Stock symbol:</label>
+        <input type="text" id="stockSymbol" name="stock_symbol" placeholder="SNOW" required pattern="[A-Z]{1,5}" />
+        <br>
+        <label for="numberOfShares">Number of share:</label>
+        <input type="text" id="numberOfShares" name="number_of_shares" placeholder="10" required />
+        <br>
+        <label for="purchasePrice">Purchase price (USD $):</label>
+        <input type="text" id="purchasePrice" name="purchase_price" placeholder="$300" required/>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}
